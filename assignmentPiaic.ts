@@ -1,9 +1,9 @@
 // // Q2:Personal Message
-// const user = "Hello Qasim, would you like to learn some Javascript today?";
-// const username = "muhammad qasim";
-// console.log(user);
+// const List = "Hello Qasim, would you like to learn some Javascript today?";
+// const Listname = "muhammad qasim";
+// console.log(List);
 // // Q3:Name Cases
-// const titleCAse = username.split(" ").map((item, i) => {
+// const titleCAse = Listname.split(" ").map((item, i) => {
 //   return item.charAt(0).toUpperCase() + item.slice(1);
 // });
 // console.log(username.toUpperCase());
@@ -179,3 +179,62 @@ if (age < 2) {
 }
 // Q29:Favorite Fruit:
 let favorite_fruits = ["Banana", "Apple", "Grapes"];
+if(favorite_fruits.includes('Banana')){
+  console.log("I love Banana");
+}else if(favorite_fruits.includes('orange')){
+  console.log("I love Orange");
+}else if(favorite_fruits.includes('Apple')){
+  console.log("I love Apple");
+}else if(favorite_fruits.includes('Grapes')){
+  console.log("I love Grapes");
+}else{
+  console.log("I love Every Furit");
+}
+// Q30:Hello Admin:
+let userList=["mqtech","yasir","shahid","bilal","hash"];
+for (let i = 0; i < userList.length; i++) {
+  const element = userList[i];
+  if(element=="mqtech"){
+    console.log(`Hello ${element}, would you like to see a status report?`);
+    
+  }else{
+    console.log(`Hello ${element}, thank you for logging in again`);
+  }
+}
+// Q31:No Users
+userList=[]
+if(userList.length==0){
+console.log("We need to find some users!");
+}
+// Q32:Checking Usernames already
+let current_users=["mqtech","yasir","shahid","bilal","hash"];
+let new_users=['mqtech','hussain','ahmer','ali','Yasir'];
+for (let i = 0; i < new_users.length; i++) {
+  const element = new_users[i];
+  if(current_users.includes(element.toLowerCase())){
+    console.log("The person will need to enter a new username");
+  }else{
+    console.log("the username is available.");
+  }
+}
+// Q33:Ordinal Numbers
+let numbers=[1,2,3,4,5,6,7,8,9]
+for (let i = 0; i < numbers.length; i++) {
+  const element = numbers[i];
+  if(element==i+1){
+    console.log(`${element}th`);
+  }
+}
+// Q34:Pizzas Array
+let pizzas=['Chicken Fajita','Chicken Tikka','Cheesy Pizza'];
+for (let i = 0; i < pizzas.length; i++) {
+  const element = pizzas[i];
+  console.log(`I like ${element}`);
+}
+// Q35:Animals
+let animals=['frogs','newts','salamanders','toads'];
+for (let i = 0; i < animals.length; i++) {
+  const element = animals[i];
+  console.log(element);
+}
+console.log("Above Animal shape is like same");
