@@ -89,14 +89,93 @@ const guestEnd = shrinkGuest.splice(shrinkGuest.length);
 console.log(guestEnd);
 // Q18:Seeing the World: Think of at least five places
 const worldPlaces = [
-  "Hana kaba",
-  "KaKrbala",
+  "khana kaba",
+  "Karbala",
   "Burj khalifa",
   "Iceland",
   "New york",
 ];
 console.log(worldPlaces);
-
-worldPlaces.sort((a, b) => a.localeCompare(b));
+let ascArray = [...worldPlaces].sort((a, b) => a.localeCompare(b));
+console.log(ascArray);
 console.log(worldPlaces);
-console.log(worldPlaces.reverse());
+let decArray = [...worldPlaces].sort((a, b) => b.localeCompare(a));
+console.log(decArray);
+console.log(worldPlaces);
+let reversOrder = worldPlaces.reverse();
+console.log(reversOrder);
+let reversOrginalOrder = worldPlaces.reverse();
+console.log(reversOrginalOrder);
+let sortOrder = worldPlaces.sort((a, b) => a.localeCompare(b));
+console.log(sortOrder);
+let reverseOrderSort = worldPlaces.sort((a, b) => b.localeCompare(a));
+console.log(reverseOrderSort);
+// Q19: CountDinner Guests
+let allguest = [...guestList, newGuestInvit, ...addNewGuestInvit];
+console.log(
+  ` The number of people you are inviting to dinner is ${allguest.length}`
+);
+// Q20: Think of something you could store in a array
+let pkCity = ["Peshawar", "Lahore", "Balochistan"];
+console.log(pkCity);
+// Q21:creates Objects
+let pakistan = {
+  province: ["KPK", "Sindh", "Balochistan", "Punjab"],
+  captial: "Islamabad",
+};
+console.log(pakistan.province);
+// Q22:Intentional Array Error:
+console.log(pkCity[2]);
+// Q23:Conditional Tests:
+let iscar = "Civic";
+let isgift = "Phone";
+let ismarried = "married";
+let is_sheCome = "yes";
+let is_achivedGoodJob = "yes";
+
+console.log(iscar == "Civic" ? "True" : " False");
+console.log(isgift == "Phone" ? "True" : " False");
+console.log(ismarried == "married" ? "True" : "False");
+console.log(is_sheCome == "yes" ? "True" : "False");
+console.log(is_achivedGoodJob == "yes" ? "True" : "False");
+console.log(iscar != "Civic" ? "True" : "False");
+console.log(isgift != "Phone" ? " True" : "False");
+console.log(ismarried != "married" ? " True" : "False");
+console.log(is_sheCome != "yes" ? " True" : "False");
+console.log(is_achivedGoodJob != "yes" ? " True" : "False");
+
+// Q24:More Conditional Tests
+// Q25:Alien Colors
+let alien_color = "green";
+console.log(alien_color == "green" ? "player just earned 5 points" : "");
+// Q26:if-else chain
+if (alien_color == "green") {
+  console.log("player just earned 5 points for shooting the alien");
+} else {
+  console.log("player just earned 10 points.");
+}
+// Q27:if-else chain.
+if (alien_color == "green") {
+  console.log("the player earned 5 points.");
+} else if (alien_color == "yellow") {
+  console.log("player just earned 10 points.");
+} else if (alien_color == "red") {
+  console.log("the player earned 15 points.");
+}
+// Q28:Stages of Life: if-else chain
+let age = 23;
+if (age < 2) {
+  console.log("the person is a baby.");
+} else if (age >= 2 && age < 4) {
+  console.log("the person is a toddler.");
+} else if (age >= 4 && age < 13) {
+  console.log("the person is a kid.");
+} else if (age >= 13 && age < 20) {
+  console.log("the person is a teenager.");
+} else if (age >= 20 && age < 65) {
+  console.log("the person is an adult.");
+} else {
+  console.log("the person is an elder");
+}
+// Q29:Favorite Fruit:
+let favorite_fruits = ["Banana", "Apple", "Grapes"];
