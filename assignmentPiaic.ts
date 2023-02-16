@@ -104,7 +104,7 @@ const addNewGuestinvit: string[] = ["Ali", "Shazaib", "Hammad"];
 const allGuestlist: string[] = [...newGuestlist, ...addNewGuestinvit];
 for (let index = 0; index < allGuestlist.length; index++) {
   const element = allGuestlist[index];
-  addNewGuestinvit.find((name) => {
+  addNewGuestinvit.some((name,_) => {
     if (name == element) {
       console.log(
         `${name}, Can you please come tonight at my home for dinner?`
@@ -253,17 +253,20 @@ if (age < 2) {
 console.log("Q:No29");
 
 let favorite_fruits: string[] = ["Banana", "Apple", "Grapes"];
-if (favorite_fruits.includes("Banana")) {
-  console.log("I love Banana");
-} else if (favorite_fruits.includes("orange")) {
-  console.log("I love Orange");
-} else if (favorite_fruits.includes("Apple")) {
-  console.log("I love Apple");
-} else if (favorite_fruits.includes("Grapes")) {
-  console.log("I love Grapes");
-} else {
-  console.log("I love Every Furit");
-}
+favorite_fruits.some((furit)=>{
+  if (furit=="Banana") {
+    console.log("I love Banana");
+  } else if (furit=="orange") {
+    console.log("I love Orange");
+  } else if (furit=="Apple") {
+    console.log("I love Apple");
+  } else if (furit=="Grapes") {
+    console.log("I love Grapes");
+  } else {
+    console.log("I love Every Furit");
+  }
+})
+
 // Q30:Hello Admin:
 console.log("Q:No30");
 
@@ -292,14 +295,14 @@ console.log("Q:No32");
 
 let current_users: string[] = ["mqtech", "yasir", "shahid", "bilal", "hash"];
 let new_users: string[] = ["mqtech", "hussain", "ahmer", "ali", "Yasir"];
-for (let i = 0; i < new_users.length; i++) {
-  const element: string = new_users[i];
-  if (current_users.includes(element.toLowerCase())) {
-    console.log("The person will need to enter a new username");
-  } else {
-    console.log("the username is available.");
-  }
+
+new_users.some(r=> {
+  if(current_users.indexOf(r.toLowerCase()) >= 0){
+          console.log("The person will need to enter a new username");
+}else{
+        console.log("the username is available.");
 }
+})
 // Q33:Ordinal Numbers
 console.log("Q:No33");
 
@@ -377,34 +380,26 @@ function city_country(city: string, country: string): string {
 // Q40:function make_album()
 console.log("Q:No40");
 
-// let albums = {
-//   artist1: {
-//     name: "Fiaz-Ahmad-Fiaz",
-//     title: "Subh-e-Azadi",
-//   },
-//   artist2: {
-//     name: "Mir-Taqi-Mir",
-//     title: "Zikr-mir",
-//   },
-// };
+let albums = {
+  artist1: {
+    name: "Fiaz-Ahmad-Fiaz",
+    title: "Subh-e-Azadi",
+  },
+  artist2: {
+    name: "Mir-Taqi-Mir",
+    title: "Zikr-mir",
+  },
+};
 
-// let albumsTrackkeY: string[] = Object.keys(albums);
+let albumsTrackkeY: string[] = Object.keys(albums);
 
-// make_album(albums, albumsTrackkeY);
+make_album(albums, albumsTrackkeY);
 
-// function make_album(albums: object, albumsTrackkeY: string[]) {
-//   console.log(albums);
-
-//   // console.log(albums['artist1']);
-//   // Object.entries(albums).forEach(([key, value]) => console.log(value));
-
-//   // for (let albumsTrackkeY in albums) {
-//   //   console.log(albumsTrackkeY); // ERROR
-//   // }
-//   // for (const albumsTrackkeY in albums) {
-//   //   console.log(albums.albumsTrackkeY);
-//   // }
-// }
+function make_album(albums: object, albumsTrackkeY: string[]) {
+ albumsTrackkeY.forEach((element)=>{
+  console.log(albums[element]);
+ })
+}
 //Q41:Make a array of magician’s names.
 console.log("Q:No41");
 
@@ -437,7 +432,10 @@ let magicanCopy: string[] = [
   "Doug Henning",
   "Siegfried and Roy",
 ];
-console.log(make_great(magicanCopy));
+make_great([...magicanCopy])
+console.log(show_magicians(magicanCopy));
+make_great(magicanCopy)
+console.log(show_magicians(magicanCopy));
 
 // Q44:Write a function that accepts a array of items a person wants on a sandwich
 console.log("Q:No44");
@@ -453,16 +451,17 @@ for (let i = 0; i < sandwich.length; i++) {
 function person_want_sandwich(sandwich) {
   console.log(`${sandwich} is to delish`);
 }
-// Q45:Write a function that stores information about a car in a Object.
-carFun("civic", "Honda", "2016", "red");
-function carFun(name, manuf, model, color) {
-  let obj = {
-    car: {
-      name: name,
+// // Q45:Write a function that stores information about a car in a Object.
+let carDetail=carFun("civic", "Honda", 2016, "red");
+console.log(carDetail);
+
+function carFun(name:string, manuf:string, model:number, color:string) {
+  let car = {
+    [name]:{
       manuf: manuf,
       model: model,
       color: color,
-    },
+    }
   };
-  console.log(obj);
+  return car;
 }
