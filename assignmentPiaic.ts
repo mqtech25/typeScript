@@ -1,73 +1,110 @@
 // // Q2:Personal Message
-// const List = "Hello Qasim, would you like to learn some Javascript today?";
-// const Listname = "muhammad qasim";
-// console.log(List);
-// // Q3:Name Cases
-// const titleCAse = Listname.split(" ").map((item, i) => {
-//   return item.charAt(0).toUpperCase() + item.slice(1);
-// });
-// console.log(username.toUpperCase());
-// console.log(username.toLowerCase());
-// console.log(titleCAse.join(" "));
-// // Q4:Famous Quote
-// console.log(`Dr Israr Ahmed once said, "Your actions and values define you."`);
-// // Q5:Famous Quote
-// const author = "Dr Israr Ahmed";
-// const msg = `${author} once said, "Your actions and values define you."`;
-// console.log(msg);
-// // Q6:Stripping Names
-// const sname = "   Qasim   ";
-// console.log(sname);
-// console.log(sname.trim());
-// // Q7,Q8:Number Eight
-// console.log(4 + 4);
-// console.log(-(-4 - 4));
-// console.log(4 * 2);
-// console.log(16 / 2);
-// // Q9:Favorite Number
-// const no = 7;
-// console.log(`${no} is my Fav number`);
+console.log("Q:No2");
+
+const List: string =
+  "Hello Qasim, would you like to learn some Javascript today?";
+console.log(List);
+// Q3:Name Cases: Store a person’s name in a variable, and then print that person’s name in lowercase, uppercase, and titlecase.
+console.log("Q:No3");
+
+const username: string = "muhammad qasim";
+const titleCAse = username.split(" ").map((item, i) => {
+  return item.charAt(0).toUpperCase() + item.slice(1);
+});
+
+console.log(username.toUpperCase());
+console.log(username.toLowerCase());
+console.log(titleCAse.join(" "));
+// Q4:Famous Quote
+console.log("Q:No4");
+
+console.log(`Dr Israr Ahmed once said, "Your actions and values define you."`);
+
+// Q5:Famous Quote
+console.log("Q:No5");
+
+const author: string = "Dr Israr Ahmed";
+const msg = `${author} once said, "Your actions and values define you."`;
+console.log(msg);
+// Q6:Stripping Names
+console.log("Q:No6");
+
+const sname: string = "   Qasim   ";
+
+console.log(sname);
+console.log(sname.trim());
+// Q7,Q8:Number Eight
+console.log("Q:No7,Q:No8");
+
+console.log(4 + 4);
+
+console.log(-(-4 - 4));
+console.log(4 * 2);
+console.log(16 / 2);
+// Q9:Favorite Number
+console.log("Q:No9");
+
+const no: number = 7;
+console.log(`${no} is my Fav number`);
 // // Q10:Adding Comments
-// // Q11:Names Array
-// const friend = ["Yasir", "Bilal", "Hashmat"];
-// friend.map((name, _) => {
-//   console.log(name);
-// });
-// // Q12:Greetings: Start with the array you used in Exercise 11 with message
-// friend.map((name, _) => {
-//   console.log(`${name} is my best friends`);
-// });
-// // Q13:Think of your favorite mode of transportation
-// const favTransport = ["Dodge Tomahawk", "Chevrolet Bolt"];
-// favTransport.map((item, _) => {
-//   console.log(`I would like to own ${item}`);
-// });
+console.log("Q:No9");
+
+console.log("Adding Comments");
+
+// Q11:Names Array
+console.log("Q:No11");
+
+const friend: string[] = ["Yasir", "Bilal", "Hashmat"];
+friend.map((name, _) => {
+  console.log(name);
+});
+// Q12:Greetings: Start with the array you used in Exercise 11 with message
+console.log("Q:No12");
+
+friend.map((name, _) => {
+  console.log(`${name} is my best friends`);
+});
+// Q13:Think of your favorite mode of transportation
+console.log("Q:No13");
+
+const favTransport: string[] = ["Dodge Tomahawk", "Chevrolet Bolt"];
+favTransport.map((item, _) => {
+  console.log(`I would like to own ${item}`);
+});
 // Q14:Guest List
-const guestList = ["Sir Qasim", "Hashmat", "Yasir"];
-guestList.map((name, _) => {
+console.log("Q:No14");
+
+const guestlist: string[] = ["Sir Qasim", "Hashmat", "Yasir"];
+guestlist.map((name, _) => {
   console.log(`${name}, Can you please come tonight at my home for dinner?`);
 });
-// Q15:Guest List
-const guestNotCome = "Hashmat";
-const newGuestInvit = "Ahmer";
-const newGuestList = guestList.filter((guest, i) => {
-  return guest != guestNotCome;
+// Q15:Changing Guest List
+console.log("Q:No15");
+
+const guestNotcome: string = "Hashmat";
+const newGuestinvit: string = "Ahmer";
+const newGuestlist = guestlist.filter((guest, i) => {
+  return guest != guestNotcome;
 });
-newGuestList.push(newGuestInvit);
-const indexOfNewGuest = newGuestList.indexOf(newGuestInvit);
-newGuestList.map((guest, i) => {
-  i == indexOfNewGuest
+newGuestlist.push(newGuestinvit);
+const indexOfNewguest: number = newGuestlist.indexOf(newGuestinvit);
+console.log(newGuestlist);
+
+newGuestlist.map((guest, i) => {
+  i == indexOfNewguest
     ? console.log(
         `${guest}, Can you please come tonight at my home for dinner?`
       )
-    : "";
+    : console.log("Already Invited");
 });
 // Q16:add More Guests
-const addNewGuestInvit = ["Ali", "Shazaib", "Hammad"];
-const allGuestList = [...newGuestList, ...addNewGuestInvit];
-for (let index = 0; index < allGuestList.length; index++) {
-  const element = allGuestList[index];
-  addNewGuestInvit.find((name) => {
+console.log("Q:No16");
+
+const addNewGuestinvit: string[] = ["Ali", "Shazaib", "Hammad"];
+const allGuestlist: string[] = [...newGuestlist, ...addNewGuestinvit];
+for (let index = 0; index < allGuestlist.length; index++) {
+  const element = allGuestlist[index];
+  addNewGuestinvit.find((name) => {
     if (name == element) {
       console.log(
         `${name}, Can you please come tonight at my home for dinner?`
@@ -76,8 +113,9 @@ for (let index = 0; index < allGuestList.length; index++) {
   });
 }
 //Q17:Shrinking Guest List
-// const skrinkList = allGuestList.splice(2, allGuestList.length);
-const shrinkGuest = allGuestList.filter((guest, i) => {
+console.log("Q:No17");
+
+const shrinkguest: string[] = allGuestlist.filter((guest, i) => {
   if (i > 1) {
     console.log(`${guest}, sorry you can’t invite them to dinner`);
   } else {
@@ -85,10 +123,14 @@ const shrinkGuest = allGuestList.filter((guest, i) => {
     return guest;
   }
 });
-const guestEnd = shrinkGuest.splice(shrinkGuest.length);
-console.log(guestEnd);
+while (shrinkguest.length > 0) {
+  shrinkguest.pop();
+} //empty array
+console.log(shrinkguest);
 // Q18:Seeing the World: Think of at least five places
-const worldPlaces = [
+console.log("Q:No18");
+
+const worldPlaces: string[] = [
   "khana kaba",
   "Karbala",
   "Burj khalifa",
@@ -96,42 +138,53 @@ const worldPlaces = [
   "New york",
 ];
 console.log(worldPlaces);
-let ascArray = [...worldPlaces].sort((a, b) => a.localeCompare(b));
+let ascArray: string[] = [...worldPlaces].sort((a, b) => a.localeCompare(b));
 console.log(ascArray);
 console.log(worldPlaces);
-let decArray = [...worldPlaces].sort((a, b) => b.localeCompare(a));
+let decArray: string[] = [...worldPlaces].sort((a, b) => b.localeCompare(a));
 console.log(decArray);
 console.log(worldPlaces);
-let reversOrder = worldPlaces.reverse();
+let reversOrder: string[] = worldPlaces.reverse();
 console.log(reversOrder);
-let reversOrginalOrder = worldPlaces.reverse();
+let reversOrginalOrder: string[] = worldPlaces.reverse();
 console.log(reversOrginalOrder);
-let sortOrder = worldPlaces.sort((a, b) => a.localeCompare(b));
+let sortOrder: string[] = worldPlaces.sort((a, b) => a.localeCompare(b));
 console.log(sortOrder);
-let reverseOrderSort = worldPlaces.sort((a, b) => b.localeCompare(a));
+let reverseOrderSort: string[] = worldPlaces.sort((a, b) => b.localeCompare(a));
 console.log(reverseOrderSort);
 // Q19: CountDinner Guests
-let allguest = [...guestList, newGuestInvit, ...addNewGuestInvit];
+console.log("Q:No19");
+
+let allguest: string[] = [...guestlist, newGuestinvit, ...addNewGuestinvit];
 console.log(
   ` The number of people you are inviting to dinner is ${allguest.length}`
 );
 // Q20: Think of something you could store in a array
-let pkCity = ["Peshawar", "Lahore", "Balochistan"];
+console.log("Q:No20");
+
+let pkCity: string[] = ["Peshawar", "Lahore", "Balochistan"];
 console.log(pkCity);
 // Q21:creates Objects
-let pakistan = {
+console.log("Q:No21");
+
+let pakistan: { province: string[]; captial: string } = {
   province: ["KPK", "Sindh", "Balochistan", "Punjab"],
   captial: "Islamabad",
 };
 console.log(pakistan.province);
 // Q22:Intentional Array Error:
+console.log("Q:No22");
+
+console.log(pkCity[3]);
 console.log(pkCity[2]);
 // Q23:Conditional Tests:
-let iscar = "Civic";
-let isgift = "Phone";
-let ismarried = "married";
-let is_sheCome = "yes";
-let is_achivedGoodJob = "yes";
+console.log("Q:No23");
+
+let iscar: string = "Civic";
+let isgift: string = "Phone";
+let ismarried: string = "married";
+let is_sheCome: string = "yes";
+let is_achivedGoodJob: string = "yes";
 
 console.log(iscar == "Civic" ? "True" : " False");
 console.log(isgift == "Phone" ? "True" : " False");
@@ -145,16 +198,23 @@ console.log(is_sheCome != "yes" ? " True" : "False");
 console.log(is_achivedGoodJob != "yes" ? " True" : "False");
 
 // Q24:More Conditional Tests
-let isPakistanDefualt = "No";
-let isSecure = "Data";
-let isCheck = true;
+console.log("Q:No24");
+
+let isPakistanDefualt: string = "No";
+let isSecure: string = "Data";
+let isCheck: boolean = true;
+let isArray: string[] = ["item1"];
 console.log(isPakistanDefualt == "No" ? true : false);
 console.log(isPakistanDefualt != "No" ? true : false);
 console.log(isSecure.toLowerCase());
 console.log(isCheck && isPakistanDefualt == "No" ? true : false);
+console.log(isPakistanDefualt == "" || isSecure == "Data" ? true : false);
+console.log(isArray.length == 0 ? "Array empty" : "Array is not empty");
 
 // Q25:Alien Colors
-let alien_color = "green";
+console.log("Q:No25");
+
+let alien_color: string = "green";
 console.log(alien_color == "green" ? "player just earned 5 points" : "");
 // Q26:if-else chain
 if (alien_color == "green") {
@@ -163,6 +223,8 @@ if (alien_color == "green") {
   console.log("player just earned 10 points.");
 }
 // Q27:if-else chain.
+console.log("Q:No27");
+
 if (alien_color == "green") {
   console.log("the player earned 5 points.");
 } else if (alien_color == "yellow") {
@@ -171,7 +233,9 @@ if (alien_color == "green") {
   console.log("the player earned 15 points.");
 }
 // Q28:Stages of Life: if-else chain
-let age = 23;
+console.log("Q:No28");
+
+let age: number = 23;
 if (age < 2) {
   console.log("the person is a baby.");
 } else if (age >= 2 && age < 4) {
@@ -186,7 +250,9 @@ if (age < 2) {
   console.log("the person is an elder");
 }
 // Q29:Favorite Fruit:
-let favorite_fruits = ["Banana", "Apple", "Grapes"];
+console.log("Q:No29");
+
+let favorite_fruits: string[] = ["Banana", "Apple", "Grapes"];
 if (favorite_fruits.includes("Banana")) {
   console.log("I love Banana");
 } else if (favorite_fruits.includes("orange")) {
@@ -199,25 +265,35 @@ if (favorite_fruits.includes("Banana")) {
   console.log("I love Every Furit");
 }
 // Q30:Hello Admin:
-let userList = ["mqtech", "yasir", "shahid", "bilal", "hash"];
+console.log("Q:No30");
+
+let userList: string[] = ["mqtech", "yasir", "shahid", "bilal", "hash"];
 for (let i = 0; i < userList.length; i++) {
-  const element = userList[i];
+  const element: string = userList[i];
   if (element == "mqtech") {
-    console.log(`Hello ${element}, would you like to see a status report?`);
+    console.log(
+      `Hello ${element.toUpperCase()}, would you like to see a status report?`
+    );
   } else {
-    console.log(`Hello ${element}, thank you for logging in again`);
+    console.log(
+      `Hello ${element.toUpperCase()}, thank you for logging in again`
+    );
   }
 }
 // Q31:No Users
+console.log("Q:No31");
+
 userList = [];
 if (userList.length == 0) {
   console.log("We need to find some users!");
 }
 // Q32:Checking Usernames already
-let current_users = ["mqtech", "yasir", "shahid", "bilal", "hash"];
-let new_users = ["mqtech", "hussain", "ahmer", "ali", "Yasir"];
+console.log("Q:No32");
+
+let current_users: string[] = ["mqtech", "yasir", "shahid", "bilal", "hash"];
+let new_users: string[] = ["mqtech", "hussain", "ahmer", "ali", "Yasir"];
 for (let i = 0; i < new_users.length; i++) {
-  const element = new_users[i];
+  const element: string = new_users[i];
   if (current_users.includes(element.toLowerCase())) {
     console.log("The person will need to enter a new username");
   } else {
@@ -225,62 +301,82 @@ for (let i = 0; i < new_users.length; i++) {
   }
 }
 // Q33:Ordinal Numbers
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log("Q:No33");
+
+let numbers: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 for (let i = 0; i < numbers.length; i++) {
-  const element = numbers[i];
+  const element: number = numbers[i];
   if (element == i + 1) {
     console.log(`${element}th`);
   }
 }
 // Q34:Pizzas Array
-let pizzas = ["Chicken Fajita", "Chicken Tikka", "Cheesy Pizza"];
+console.log("Q:No34");
+
+let pizzas: string[] = ["Chicken Fajita", "Chicken Tikka", "Cheesy Pizza"];
 for (let i = 0; i < pizzas.length; i++) {
-  const element = pizzas[i];
+  const element: string = pizzas[i];
   console.log(`I like ${element}`);
 }
 // Q35:Animals
-let animals = ["frogs", "newts", "salamanders", "toads"];
+console.log("Q:No35");
+
+let animals: string[] = ["frogs", "newts", "salamanders", "toads"];
 for (let i = 0; i < animals.length; i++) {
-  const element = animals[i];
+  const element: string = animals[i];
   console.log(element);
 }
 console.log("Above Animal shape is like same");
 
 // Q36:T-Shirt:Write a function called make_shirt()
-let shirt_size = 15;
-let shirt_text = "Don't underestimate anyone, Not even yourself";
+console.log("Q:No36");
+
+let shirt_size: number = 15;
+let shirt_text: string = "Don't underestimate anyone, Not even yourself";
 make_shirt(shirt_size, shirt_text);
 
-function make_shirt(size, text) {
+function make_shirt(size: number, text: string) {
   console.log(`Shirt size is ${size} and text on shirt is "${text}"`);
 }
 // Q37:Large Shirts: Modify the make_shirt()
-let shirt_s = "Large & Medium";
-let shirt_tex = "I love TypeScript.";
+console.log("Q:No37");
+
+let shirt_s: string = "Large & Medium";
+let shirt_tex: string = "I love TypeScript.";
 update_make_shirt(shirt_s, shirt_tex);
 
-function update_make_shirt(size, text) {
+function update_make_shirt(size: string, text: string) {
   console.log(`Shirt size is ${size} and text on shirt is "${text}"`);
 }
-
 // Q38:Write a function called describe_city()
-let city = ["Islamabad", "Peshawar", "lahore"];
-let country = "Pakistan";
+console.log("Q:No38");
+
+let city: string[] = ["Islamabad", "Peshawar", "Sharjah"];
+let country: string = "Pakistan";
 for (let i = 0; i < city.length; i++) {
   describe_city(city[i], country);
 }
-function describe_city(city, country) {
-  console.log(`${city} is the city of ${country}`);
+function describe_city(city: string, country: string) {
+  if (city == "Sharjah") {
+    console.log(`${city} is not the city of ${country}`);
+  } else {
+    console.log(`${city} is the city of ${country}`);
+  }
 }
 
 // Q39:function called city_country()
-let result = city_country("Lahore", "Pakistan");
-console.log(`"${result[0]},${result[1]}"`);
+console.log("Q:No39");
 
-function city_country(city, country) {
-  return [city, country];
+let result = city_country("Lahore", "Pakistan");
+console.log(result);
+
+function city_country(city: string, country: string): string {
+  let response: string = `"${city},${country}"`;
+  return response;
 }
 // Q40:function make_album()
+console.log("Q:No40");
+
 // let albums = {
 //   artist1: {
 //     name: "Fiaz-Ahmad-Fiaz",
@@ -292,36 +388,65 @@ function city_country(city, country) {
 //   },
 // };
 
-// let albumskEY = Object.keys(albums);
+// let albumsTrackkeY: string[] = Object.keys(albums);
 
-// make_album(albums, albumskEY);
-// function make_album(albums, albumskEY) {
-//   for (const albumskEY in albums) {
-//     console.log(albums[albumskEY]);
-//   }
+// make_album(albums, albumsTrackkeY);
+
+// function make_album(albums: object, albumsTrackkeY: string[]) {
+//   console.log(albums);
+
+//   // console.log(albums['artist1']);
+//   // Object.entries(albums).forEach(([key, value]) => console.log(value));
+
+//   // for (let albumsTrackkeY in albums) {
+//   //   console.log(albumsTrackkeY); // ERROR
+//   // }
+//   // for (const albumsTrackkeY in albums) {
+//   //   console.log(albums.albumsTrackkeY);
+//   // }
 // }
 //Q41:Make a array of magician’s names.
-let magican = ["David Copperfield", "Doug Henning", "Siegfried and Roy"];
+console.log("Q:No41");
+
+let magican: string[] = [
+  "David Copperfield",
+  "Doug Henning",
+  "Siegfried and Roy",
+];
 show_magicians(magican);
-function show_magicians(magican) {
+function show_magicians(magican: string[]) {
   for (let i = 0; i < magican.length; i++) {
     console.log(magican[i]);
   }
 }
 // Q42: Write a function called make_great()
+console.log("Q:No42");
+
 make_great(magican);
-function make_great(magican) {
+function make_great(magican: string[]) {
   for (let i = 0; i < magican.length; i++) {
     magican[i] = `The Great ${magican[i]}`;
   }
 }
 console.log(show_magicians(magican));
 // Q43: function make_great() with a copy of the array of magicians’ names.
-// let magicanCopy = ["David Copperfield", "Doug Henning", "Siegfried and Roy"];
-// console.log(make_great(magicanCopy));
+console.log("Q:No43");
+
+let magicanCopy: string[] = [
+  "David Copperfield",
+  "Doug Henning",
+  "Siegfried and Roy",
+];
+console.log(make_great(magicanCopy));
 
 // Q44:Write a function that accepts a array of items a person wants on a sandwich
-let sandwich = ["Chicken Sandwich", "Egg Sandwich", "Seafood Sandwich"];
+console.log("Q:No44");
+
+let sandwich: string[] = [
+  "Chicken Sandwich",
+  "Egg Sandwich",
+  "Seafood Sandwich",
+];
 for (let i = 0; i < sandwich.length; i++) {
   person_want_sandwich(sandwich[i]);
 }
