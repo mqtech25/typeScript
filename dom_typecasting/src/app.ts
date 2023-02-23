@@ -1,24 +1,30 @@
 let inputArray: any = document.querySelectorAll(".inputFields")!;
 let submitBtn = document.querySelector(".calcEmpBtn")!;
-let allInputInObj={};
-// console.log(inputArray);
-// for (const key in inputArray) {
-//   console.log(inputArray[key]);
-// }
-
+let employee = new Map();
+let allEmployeeObj = new Map();
+let allEmployees: any[] = [];
+let count = 0;
 let eventFunction = (e: Event) => {
   e.preventDefault();
   for (const key in inputArray) {
     if (inputArray.hasOwnProperty.call(inputArray, key)) {
       const element = inputArray[key];
-      // console.log(element.value, element.id);
-    //   allInputInObj.properties = element.id;
-        allInputInObj={
-            [element.id] :element.value
-        }
+      employee.set(element.id, element.value);
     }
   }
-  console.log(allInputInObj);
-};
+  count++;
+  // object assign to object
+  allEmployeeObj.set("emplyee" + count, employee);
+  console.log(allEmployeeObj);
+  // object assign to array
+  // allEmployees.push(employee);
+  // console.log(allEmployees);
 
+  allEmployeeObj.forEach((value: Map<any, any>, key) => {
+    console.log(`${key}: ${value}`);
+    value.forEach((value1, key1) => {
+      console.log(`${key1}: ${value1}`);
+    });
+  });
+};
 submitBtn?.addEventListener("click", eventFunction);
