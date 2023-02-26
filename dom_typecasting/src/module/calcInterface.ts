@@ -6,5 +6,5 @@ export interface calcInterface {
   workDayInWeek: number;
   noWeekWorkYear: number;
   bonuseOverTime: number;
-  calcationValue(): string[];
+  calcationValue():number;
 }

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script
+      src="https://kit.fontawesome.com/8f19f2c473.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="showcase">
+      <div class="showcase-top">
+        <img src="./assets/img/logo.png" alt="Netflix" />
+      </div>
+      <div class="showcase-content">
+        <h1>See what's next</h1>
+        <p>Search About Your Favour Hero's</p>
+        <div class="input-group">
+          <input type="text" class="form-control" id="search-input" placeholder="Search" required>
+          <button class="btn btn-primary btn-rounded" id="search-btn">Search</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="cards">
+        <h1 class="text-center heading">Hero's</h1>
+        <div class="" id="slider-sec">
+          <!-- <div class="slide">
+              <div class="card">
+              <img src="./assets/img/hero.png" alt="" class="img-responsive" />
+              <h1>Title 1 </h1>
+              </div>
+          </div> -->
+          <!-- <div class="slide">
+            <a href="">
+              <div class="card">
+              <img src="./assets/img/hero.png" alt="" class="img-responsive" />
+              <h1>Title 1 </h1>
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="">
+              <div class="card">
+              <img src="./assets/img/hero.png" alt="" class="img-responsive" />
+              <h1>Title 1 </h1>
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="">
+              <div class="card">
+              <img src="./assets/img/hero.png" alt="" class="img-responsive" />
+              <h1>Title 1 </h1>
+              </div>
+            </a>
+          </div> -->
+        </div>
+      </section>
+      <section class="hero-details d-none">
+        <div class="card">
+          <div class="hero-img text-center">
+            <img src="./assets/img/hero.png" alt="">
+          </div>
+          <div class="hero-detail">
+            <h1 class="text-xl">Title</h1>
+            <ul class="hero-tab">
+              <li class="hero-tab-item">
+                Item1
+              </li>
+              <li class="hero-tab-item">
+                Item2
+              </li>
+              <li class="hero-tab-item">
+                Item3
+              </li>
+            </ul>
+            <div class="hero-tab-container">
+              <div class="hero-tab-content">
+                  <p>Tab1 content</p>
+              </div>
+              <div class="hero-tab-content d-none">
+                <p>Tab2 content</p>
+              </div>
+              <div class="hero-tab-content d-none">
+                <p>Tab3 content</p>
+              </div>
+            </div>
+            <div class="hero-related-container">
+              <h3>Related Heros</h3>
+              <ul class="hero-rel">
+                <!-- <li class="hero-rel-item">
+                  <img src="./assets/img/hero.png" alt="">
+                </li> -->
+                <!-- <li class="hero-rel-item">
+                  <img src="./assets/img/hero.png" alt="">
+                </li>
+                <li class="hero-rel-item">
+                  <img src="./assets/img/hero.png" alt="">
+                </li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(document).ready(()=>{
+        function start_slick() {
+          if($('.slider')){
+              $('.slider').slick({
+              autoplay:true,
+              autoplaySpeed:1800,
+              arrows: false,
+              centerMode: false,
+              infinite: true,
+              centerPadding: '60px',
+              slidesToShow: 3,
+              responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                  }
+                }
+              ]
+          });
+              }
+      
+            }
+        window.setInterval( start_slick, 20 );
+      })
+  
+    </script>
+  </body>
+</html>
