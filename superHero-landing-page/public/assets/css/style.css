@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
 :root {
   --primary-color: #e50914;
   --shadow-primary-color: #e5091448;
@@ -13,7 +12,7 @@
 body {
   background: #000;
   color: #999;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 ul {
   list-style: none;
@@ -24,7 +23,7 @@ h3,
 h4 {
   color: #fff;
 }
-.heading{
+.heading {
   font-size: 32px;
 }
 a {
@@ -37,20 +36,19 @@ p {
 img {
   width: 100%;
 }
-.input-group{
+.input-group {
   display: flex;
   width: 500px;
 }
-.input-group .form-control{
-  border-radius: .375rem 0 0 .375rem !important;
+.input-group .form-control {
+  border-radius: 0.375rem 0 0 0.375rem !important;
   font-size: 20px;
   border-right: 0;
 }
-.input-group .btn{
-  border-radius: 0 .375rem .375rem 0 !important;
-
+.input-group .btn {
+  border-radius: 0 0.375rem 0.375rem 0 !important;
 }
-.form-control{
+.form-control {
   display: block;
   width: 100%;
   padding: 1rem 1rem;
@@ -64,15 +62,14 @@ img {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: .375rem;
-  transition: all .15s ease-in-out;
-  font-family: 'Quicksand', sans-serif;
-
+  border-radius: 0.375rem;
+  transition: all 0.15s ease-in-out;
+  font-family: "Quicksand", sans-serif;
 }
-.form-control:focus{
+.form-control:focus {
   border-color: var(--dark-color);
   outline: 0;
-box-shadow: 0 0 0 .25rem var(--shadow-primary-color);
+  box-shadow: 0 0 0 0.25rem var(--shadow-primary-color);
 }
 .showcase {
   width: 100%;
@@ -178,22 +175,24 @@ box-shadow: 0 0 0 .25rem var(--shadow-primary-color);
   padding-top: 0.5rem;
 }
 /* section card */
-section.cards{
+section.cards {
   background-color: #3d3d3d;
   padding: 20px;
-
 }
-.slider .slide{
+/* .slider {
+  display: flex !important;
+} */
+.slider .slide {
   padding: 20px;
   box-shadow: 0px -15px 12px -4px #141414;
-  margin:0 10px;
+  margin: 0 10px;
   max-width: 300px;
 }
-.slider .slide .card{
+.slider .slide .card {
   cursor: pointer;
 }
-.slider .slide .card h1{
- margin: 10px 0;
+.slider .slide .card h1 {
+  margin: 10px 0;
 }
 /* Tab-2-content */
 #tab-2-content > .tab-2-content-inner > .tab-2-content-top {
@@ -238,7 +237,7 @@ section.cards{
 .text-dark {
   color: #999;
 }
-.d-none{
+.d-none {
   display: none;
 }
 /* Button */
@@ -255,9 +254,8 @@ section.cards{
   outline: none;
   cursor: pointer;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 600;
-
 }
 .btn:hover {
   opacity: 0.9;
@@ -275,62 +273,67 @@ section.cards{
   padding: 0.8rem 1.3rem;
   text-transform: uppercase;
 }
-.text-center{
+.text-center {
   text-align: center;
 }
 /* hero-details section */
-section.hero-details{
+section.hero-details {
   padding: 20px;
 }
-section.hero-details .card{
+section.hero-details .card {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
-section.hero-details .card .hero-img,section.hero-details .card .hero-detail{
+section.hero-details .card .hero-img,
+section.hero-details .card .hero-detail {
   width: 50%;
   padding: 1rem;
 }
 
-section.hero-details .card .hero-img img{
+section.hero-details .card .hero-img img {
   width: 80%;
   border: 20px solid #3d3d3d;
 }
 /* Tabs */
-section.hero-details .card .hero-tab{
+section.hero-details .card .hero-tab {
   display: flex !important;
   flex-wrap: wrap;
-  justify-content: space-between; 
-  width: 100%; 
+  justify-content: space-between;
+  width: 100%;
   border-bottom: 1px solid #3d3d3d;
 }
-section.hero-details .card .hero-tab .hero-tab-item{
+section.hero-details .card .hero-tab .hero-tab-item {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   padding: 15px;
   border-bottom: 4px solid transparent;
-transition: 0.3s all;
+  transition: 0.3s all;
 }
-section.hero-details .card .hero-tab .hero-tab-item:hover{
+section.hero-details .card .hero-tab .hero-tab-item:hover,
+section.hero-details .card .hero-tab .hero-tab-item.active {
   border-bottom: 4px solid var(--primary-color);
   color: #fff;
 }
-section.hero-details .card .hero-tab-container .hero-tab-content{
-padding: 15px;
-transition: 0.5 all;
-
+section.hero-details .card .hero-tab-container .hero-tab-content {
+  padding: 15px;
+  transition: 0.5 all;
+  display: none;
+}
+section.hero-details .card .hero-tab-container .hero-tab-content.active {
+  display: block;
 }
 /* hero related */
-section.hero-details .hero-related-container{
+section.hero-details .hero-related-container {
   margin-top: 10px;
 }
-section.hero-details .hero-related-container .hero-rel{
+section.hero-details .hero-related-container .hero-rel {
   display: flex !important;
-  flex-wrap: wrap; 
-  width: 100%; 
+  flex-wrap: wrap;
+  width: 100%;
 }
-section.hero-details .hero-related-container .hero-rel .hero-rel-item{
+section.hero-details .hero-related-container .hero-rel .hero-rel-item {
   width: 33%;
   padding: 10px;
   cursor: pointer;
@@ -378,6 +381,30 @@ section.hero-details .hero-related-container .hero-rel .hero-rel-item{
 .footer .footer-cols ul li {
   line-height: 1.9;
 }
+.btnTotop {
+  position: fixed;
+  bottom: 40px;
+  right: 80px;
+  z-index: 100;
+}
+.btnTotop button {
+  background: #fff;
+  width: 65px;
+  height: 65px;
+  font-size: 46px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid #3d3d3d;
+  transition: 0.3s all;
+  margin: 0;
+}
+.btnTotop button:hover {
+  background-color: #141414;
+  color: #fff;
+}
 /* media query */
 @media (max-width: 960px) {
   .showcase {
@@ -417,18 +444,18 @@ section.hero-details .hero-related-container .hero-rel .hero-rel-item{
   .footer .footer-cols {
     grid-template-columns: repeat(2, 1fr);
   }
-  section.hero-details .card .hero-img,section.hero-details .card .hero-detail{
+  section.hero-details .card .hero-img,
+  section.hero-details .card .hero-detail {
     width: 100%;
     padding: 1rem;
   }
-  section.hero-details .card .hero-img img{
+  section.hero-details .card .hero-img img {
     width: 100%;
   }
-
 }
 
 @media (max-width: 700px) {
-  .input-group{
+  .input-group {
     width: 100%;
   }
   .showcase::after {
