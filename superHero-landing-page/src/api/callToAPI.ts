@@ -21,6 +21,7 @@ const superHero = async (name: string) => {
     .then((resp) => resp.json())
     .then((resp) => {
       if ("error" in resp) {
+        preloader?.classList.add("d-none");
         return resp.error;
       } else {
         preloader?.classList.add("d-none");
