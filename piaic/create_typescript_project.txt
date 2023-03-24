@@ -1,0 +1,20 @@
+tsc -init
+single file cmd{
+    tsc
+    node filename
+}
+
+tsc -w //watch create js file and save all tsc file changes auto to js
+
+multiple files{
+    changes{
+        rootDir= "source files folder tsc",
+        outDir="public files folder js"
+        include="source files folder tsc"
+    }
+}
+
+npm init -y //create node project pakage manager
+npm i inquirer //to get input
+
+touch .gitignore //create a .gitignore file
